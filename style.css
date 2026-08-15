@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #FEA4BE;
+    --pink-dark-text: #F05EA6;
+    --bg-footer: #CF4F74;
+    --bg-button: linear-gradient(135deg, #FF91B1, #EB517E); 
+    --white-text: #FFFFFF;
+    --font-title: "Italiana", sans-serif;
+    --font-text: "Poppins", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    background-color: var(--primary-color);
+    padding: 0 40px;
+    height: 70px;
+    border-radius: 0px 0px 40px 40px;
+    width: 100%;
+}
+
+/* Ajustes da Logo */
+.nav_header {
+    display: flex;
+    align-items: center;
+}
+
+.logo_nail {
+    height: 50px;
+}
+
+/* Estilizando a lista de navegação (links) */
+.nav_itens {
+    display: flex;
+    list-style: none; /* Remove as bolinhas da lista */
+    gap: 30px;        /* Espaçamento entre os links */
+}
+
+.nav_itens a {
+    font-family: var(--font-text);
+    text-decoration: none;
+    color: var(--white-text);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Estilizando o botão do menu */
+.button-primary button {
+    background: var(--bg-button);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--white-text);
+    font-family: var(--font-text);
+    font-weight: 600;
+    cursor: pointer;
+}
