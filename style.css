@@ -16,50 +16,246 @@
     box-sizing: border-box;
 }
 
-.navbar nav {
+body{
+    background-color: var(--white-text);
+    align-content: center;
+}
+
+html{
+    font-family: var(--font-text);
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-family: var(--font-title);
+    font-weight: 500;
+    font-size: 60px;
+}
+
+h2{
+    font-family: var(--font-title);
+    font-size: 25px;
+}
+
+button{
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+button:hover{
+    box-shadow: 0px 2px 5px 0px #D9557B;
+}
+
+#button-primary{
+    background: var(--bg-button);
+    color: var(--white-text);
+    max-width: 200px;
+}
+
+#button-secondary{
+    border: 1px solid var(--primary-color);
+    background-color: var(--white-text);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Estilizando a navbar */
+nav {
+    position: fixed;
     display: flex;
+    flex-direction: row;
     justify-content: space-between; 
-    align-items: center;            
+    align-items: center;    
+    left: 50%;            
+    transform: translateX(-50%);       
+     
     background-color: var(--primary-color);
     padding: 0 40px;
     height: 70px;
     border-radius: 0px 0px 40px 40px;
     width: 100%;
-}
-
-/* Ajustes da Logo */
-.nav_header {
-    display: flex;
-    align-items: center;
+    max-width: 1120px;
 }
 
 .logo_nail {
     height: 50px;
 }
 
-/* Estilizando a lista de navegação (links) */
+
 .nav_itens {
     display: flex;
-    list-style: none; /* Remove as bolinhas da lista */
-    gap: 30px;        /* Espaçamento entre os links */
+    gap: 30px;    
+}
+
+.nav_itens :hover{
+    font-weight: 700;
 }
 
 .nav_itens a {
-    font-family: var(--font-text);
-    text-decoration: none;
     color: var(--white-text);
-    font-weight: 500;
     font-size: 14px;
 }
 
 /* Estilizando o botão do menu */
-.button-primary button {
+#button-primary button {
     background: var(--bg-button);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
     color: var(--white-text);
-    font-family: var(--font-text);
-    font-weight: 600;
-    cursor: pointer;
 }
+
+/* Estilizando a main */
+main{
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Estilizando o hero - página principal */
+.hero-main{
+    background-image: linear-gradient(#E88CA980, #EB3A7230), url(img/hero-bg.png);
+    max-width: 100%;
+    background-size: cover
+}
+
+.hero{
+    color: var(--white-text);
+    max-width: 1120px;
+    padding: 50px 100px;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 50px;
+    padding: 20vh 0px;
+    max-width: 500px;
+    max-height: 500px;
+
+}
+.hero-content p{
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.sobremim-bg{
+    background-image: url(img/bg-sobremim.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    margin-top: -230px; 
+    padding-top: 150px; 
+}
+
+.sobreMim{
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    gap: 50px;              
+    padding: 40px;
+    height: 100vh;
+}
+
+.sobremim-img img{
+    height: 30rem;
+}
+
+.itens-content{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 20px;             
+    max-width: 500px;
+}
+
+.sobreMim span{
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 22px;
+}
+
+
+/* Estilizando os procedimentos */
+.procedimentos-bg {
+
+    background-image: url('img/procedimentos.svg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    
+    margin-top: -130px; 
+    padding-top: 150px; 
+}
+
+.procedimentos {
+    margin: 0 auto; 
+    padding: 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.procedimentos header{
+    text-align: center;
+    color: var(--white-text);
+}
+
+.img-procedimentos{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+.img-procedimentos img{
+    background-size: cover;
+    border-radius: 20px;
+    height: 20rem;
+    width: 20rem;
+    
+}
+
+/* Estilizando os feedbacks */
+.feedbacks{
+    max-width: 1120px;
+    padding: 3rem;
+    height: 100vh;   
+}
+
+/* Estilizando o footer */
+footer{
+    background-color: var(--bg-footer);
+    border-radius: 50px 50px 0px 0px;
+    padding: 0px 50px;
+}
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    color: var(--white-text);
+    gap: 30rem;
+    max-width: 1120px;
+}
+
+.itens-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+

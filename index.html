@@ -9,59 +9,69 @@ obras de arte para valorizar sua beleza.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">    
-        <nav>
-            <div class="logo_header">
-                <a href="#">
-                    <img src="img/logo_naildesigner.svg" alt="logo" class="logo_nail">
-                </a>
-            </div>
-            <ul class="nav_itens">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PROCEDIMENTOS</a></li>
-                <li><a href="#">FEEDBACK</a></li>
-            </ul>
-            <div class="button-primary">
-                <button>ENTRE EM CONTATO</button>
-            </div>
-        </nav>
+    <header>    
+            <nav>
+                <div class="logo_header">
+                    <a href="#">
+                        <img src="img/logo_naildesigner.svg" alt="logo" class="logo_nail">
+                    </a>
+                </div>
+                <ul class="nav_itens">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PROCEDIMENTOS</a></li>
+                    <li><a href="#">FEEDBACK</a></li>
+                </ul>
+                <button id="button-primary">ENTRE EM CONTATO</button>
+            </nav>
      </header>
 
      <main>
-        <section class="hero">
-            <header>
-                <span>NAIL DESIGNER</span>
-                <h1>THALITA PIVATO</h1>
-                <h2>Transformendo unhas em verdadeiras obras de arte para valorizar sua beleza</h2>
-                <button class="button-primary">AGENDE SEU HORÁRIO</button>
-            </header>
+        <div class="hero-main">
+            <section class="hero">
+                <header class="hero-content">
+                    <div>
+                        <div>
+                            <span>NAIL DESIGNER</span>
+                            <h1>THALITA PIVATO</h1>
+                        </div>
+                        <p>Transformando unhas em verdadeiras obras de arte para valorizar sua beleza</p>
+                    </div>
+                    <button id="button-primary">AGENDE SEU HORÁRIO</button>
+                </header>
+            </section>
+        </div>
 
-        </section>
+        <div class="sobremim-bg">
+            <section class="sobreMim">
+                    <div class="sobremim-img"> 
+                        <img src="img/Detalhe-IMG.svg" alt="Detalhe IMG Perfil">
+                    </div>
 
-        <section class="sobreMim">
-            <div class="img-sobremim"> 
-                <img src="img/Detalhe-IMG.svg" alt="Detalhe IMG Perfil">
-            </div>
-            <header>
-                <span>SOBRE MIM</span>
-                <h2>Beleza que nasce do cuidado e do amor por cada detalhe.</h2>
-                <p>Olá! Sou Thalita, Nail Designer, apaixonada por transformar autoestima através do cuidado.<br>Meu objetivo é proporcionar uma experiência acolhedora, onde você possa relaxar, se sentir valorizada e sair ainda mais confiante.</p>
-                <button class="button-secondary">CONHEÇA MEU TRABALHO</button>
-            </header>
-        </section>
+                    <header class="itens-content">
+                            <div>
+                                <span>SOBRE MIM</span>
+                                <h2>Beleza que nasce do cuidado e do amor por cada detalhe.</h2>
+                            </div>
+                            <p>Olá! Sou Thalita, Nail Designer, apaixonada por transformar autoestima através do cuidado.<br> <br> Meu objetivo é proporcionar uma experiência acolhedora, onde você possa relaxar, se sentir valorizada e sair ainda mais confiante.</p>
+                            <button id="button-secondary">CONHEÇA MEU TRABALHO</button>
+                    </header>
+            </section>
+        </div>
 
+        <div class="procedimentos-bg">
         <section class="procedimentos">
-            <header>
-                <h2>PROCEDIMENTOS</h2>
-                <img src="img/Details.svg" alt="detalhe separacao">
-            </header>
-            <div class="img-procedimentos">
-                <figure><img src="" alt=""></figure>
-                <figure><img src="" alt=""></figure>
-                <figure><img src="" alt=""></figure>
-            </div>
-            <button>QUERO AGENDAR UM PROCEDIMENTO</button>
+                <header>
+                    <h2>PROCEDIMENTOS</h2>
+                    <img src="img/Details.svg" alt="detalhe separacao">
+                </header>
+                <div class="img-procedimentos">
+                    <img src="img/banho-gel.jpeg" alt="banho de gel">
+                    <img src="img/esmaltacao-gel.jpeg" alt="esmaltação em gel">
+                    <img src="img/alongamento-gel.jpeg" alt="Alongamento em gel">
+                </div>
+            <button id="button-secondary">QUERO AGENDAR UM PROCEDIMENTO</button>
         </section>
+        </div>
 
         <section class="feedbacks">
             <header>
@@ -87,25 +97,29 @@ obras de arte para valorizar sua beleza.">
      </main>
 
     <footer>
-        <div class="atendimento">
+        <div class="footer-content">
             <img src="img/logo_naildesigner.svg" alt="LogoTP">
-            <p>ATENDIMENTO</p>
-            <p>@thalitapivato</p>
-            <p>Itajubá-MG</p>
-        </div>
-        <div class="links">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Procedimentos</a></li>
-                <li><a href="#">Feedbacks</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </div>
-        <div>
-            <p>SIGA-ME</p>
-            <img src="img/InstagramLogo.svg" alt="Logo Instagram">
-            <img src="img/WhatsappLogo.svg" alt="Logo WhatsApp">
+            <div class="itens-footer">
+                <div class="atendimento">
+                    <p>ATENDIMENTO</p>
+                    <p>@thalitapivato</p>
+                    <p>Itajubá-MG</p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sobre mim</a></li>
+                        <li><a href="#">Procedimentos</a></li>
+                        <li><a href="#">Feedbacks</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="sigame">
+                <p>SIGA-ME</p>
+                <img src="img/InstagramLogo.svg" alt="Logo Instagram">
+                <img src="img/WhatsappLogo.svg" alt="Logo WhatsApp">
+                </div>
+            </div>
         </div>
     </footer>
 </body>
