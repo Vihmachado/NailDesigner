@@ -4,10 +4,13 @@
     --primary-color: #FEA4BE;
     --pink-dark-text: #F05EA6;
     --bg-footer: #CF4F74;
-    --bg-button: linear-gradient(135deg, #FF91B1, #EB517E); 
+    --bg-feedbacks: #FCE3ED;
+    --bg-button: linear-gradient(135deg, #FF91B1, #EB517E);
     --white-text: #FFFFFF;
-    --font-title: "Italiana", sans-serif;
+    --text-dark: #2B2226;
+    --font-title: "Italiana", serif;
     --font-text: "Poppins", sans-serif;
+    --container-width: 1120px;
 }
 
 * {
@@ -16,246 +19,727 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: var(--white-text);
-    align-content: center;
-}
-
-html{
+html {
     font-family: var(--font-text);
-    font-weight: 500;
+    font-weight: 400;
+    scroll-behavior: smooth;
 }
 
-a{
+body {
+    background-color: var(--white-text);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+a {
     text-decoration: none;
+    color: inherit;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-h1{
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1 {
     font-family: var(--font-title);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 60px;
+    line-height: 1.1;
 }
 
-h2{
+h2 {
     font-family: var(--font-title);
+    font-weight: 400;
     font-size: 25px;
+    line-height: 1.3;
 }
 
-button{
-    padding: 12px 20px;
-    border-radius: 20px;
+p {
+    line-height: 1.6;
+}
+
+/* ---------- Botões ---------- */
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
     border: none;
+    font-family: var(--font-text);
     font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.3px;
     cursor: pointer;
-    
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    white-space: nowrap;
 }
 
-button:hover{
-    box-shadow: 0px 2px 5px 0px #D9557B;
+.btn:hover {
+    box-shadow: 0px 6px 16px 0px rgba(217, 85, 123, 0.45);
+    transform: translateY(-1px);
 }
 
-#button-primary{
+.btn-primary {
     background: var(--bg-button);
     color: var(--white-text);
-    max-width: 200px;
 }
 
-#button-secondary{
+.btn-secondary {
     border: 1px solid var(--primary-color);
     background-color: var(--white-text);
-    color: var(--primary-color);
+    color: var(--pink-dark-text);
     font-weight: 500;
 }
 
-/* Estilizando a navbar */
-nav {
+.btn-outline {
+    border: 1px solid var(--white-text);
+    background-color: transparent;
+    color: var(--white-text);
+    font-weight: 500;
+}
+
+.btn-outline:hover {
+    box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Header / Navbar ---------- */
+.site-header {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; 
-    align-items: center;    
-    left: 50%;            
-    transform: translateX(-50%);       
-     
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
     background-color: var(--primary-color);
     padding: 0 40px;
     height: 70px;
     border-radius: 0px 0px 40px 40px;
     width: 100%;
-    max-width: 1120px;
+    max-width: var(--container-width);
 }
 
 .logo_nail {
     height: 50px;
 }
 
-
 .nav_itens {
     display: flex;
-    gap: 30px;    
-}
-
-.nav_itens :hover{
-    font-weight: 700;
+    gap: 30px;
 }
 
 .nav_itens a {
     color: var(--white-text);
     font-size: 14px;
+    font-weight: 500;
+    transition: font-weight 0.15s ease;
 }
 
-/* Estilizando o botão do menu */
-#button-primary button {
-    background: var(--bg-button);
-    color: var(--white-text);
+.nav_itens a:hover {
+    font-weight: 700;
 }
 
-/* Estilizando a main */
-main{
+/* ---------- Main ---------- */
+main {
     display: flex;
     flex-direction: column;
+}
+
+/* ---------- Hero ---------- */
+.hero-main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    isolation: isolate;
+}
+
+.hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
+.hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgba(232, 140, 169, 0.15) 0%, rgba(90, 15, 45, 0.55) 100%);
 
 }
 
-/* Estilizando o hero - página principal */
-.hero-main{
-    background-image: linear-gradient(#E88CA980, #EB3A7230), url(img/hero-bg.png);
-    max-width: 100%;
-    background-size: cover
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
 }
 
-.hero{
-    color: var(--white-text);
-    max-width: 1120px;
-    padding: 50px 100px;
+.hero {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 100px;
+    min-height: 100vh;
+    display: flex;
     align-items: center;
-    height: 100vh;
 }
 
-.hero-content{
+.hero-content {
+    color: var(--white-text);
     display: flex;
     flex-direction: column;
     align-items: baseline;
     gap: 50px;
-    padding: 20vh 0px;
     max-width: 500px;
-    max-height: 500px;
-
 }
-.hero-content p{
+
+.hero-title span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.hero-content p {
     font-weight: 300;
     font-size: 25px;
+    margin-top: 20px;
 }
 
-.sobremim-bg{
+/* ---------- Sobre mim ---------- */
+.sobremim-bg {
+    position: relative;
     background-image: url(img/bg-sobremim.png);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
+    background-position: top center;
     width: 100%;
-    margin-top: -230px; 
-    padding-top: 150px; 
+    margin-top: -180px;
+    padding-top: 100px;
+    z-index: 1;
 }
 
-.sobreMim{
-    display: flex;
-    align-items: center;   
+.sobreMim {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "img text"
+        "img button";
+    align-items: center;
     justify-content: center;
-    gap: 50px;              
+    column-gap: 60px;
+    row-gap: 30px;
+    max-width: var(--container-width);
+    margin: 0 auto;
     padding: 40px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.sobremim-img img{
+.sobremim-img {
+    grid-area: img;
+    justify-self: center;
+}
+
+.sobremim-img img {
     height: 30rem;
+    width: auto;
 }
 
-.itens-content{
+.sobremim-text {
+    grid-area: text;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
-    gap: 20px;             
+    gap: 20px;
     max-width: 500px;
+    align-self: end;
 }
 
-.sobreMim span{
-    color: var(--primary-color);
-    font-weight: 400;
-    font-size: 22px;
+.sobreMim span {
+    color: var(--pink-dark-text);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
+.sobremim-cta {
+    grid-area: button;
+    justify-self: start;
+    align-self: start;
+    margin-top: 10px;
+}
 
-/* Estilizando os procedimentos */
+/* ---------- Procedimentos ---------- */
 .procedimentos-bg {
-
-    background-image: url('img/procedimentos.svg');
-    background-repeat: no-repeat;
-    background-size: cover; 
+    position: relative;
     width: 100%;
-    
-    margin-top: -130px; 
-    padding-top: 150px; 
+    margin-top: -130px;
+    padding-top: 160px;
+    overflow: hidden;
 }
+
+.procedimentos-bg::before {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    background-image: url(img/bg-procedimentos.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
 
 .procedimentos {
-    margin: 0 auto; 
+    max-width: var(--container-width);
+    margin: 0 auto;
     padding: 3rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 45px;
+}
+
+.procedimentos header {
+    text-align: center;
+    color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.procedimentos h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.details-divider {
+    width: 150px;
+    height: auto;
+}
+
+.img-procedimentos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.img-procedimentos figure {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    flex: 1 1 260px;
+    max-width: 20rem;
+}
+
+.img-procedimentos img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-procedimentos figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 40px 12px 10px;
+
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0)
+    );
+
+    color: var(--white-text);
+    font-family: var(--font-title);
+    font-size: 26px;
+    text-align: center;
+}
+
+/* ---------- Feedbacks ---------- */
+.feedbacks {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.feedbacks-box {
+    background-color: var(--bg-feedbacks);
+    border-radius: 50px;
+    padding: 60px;
+}
+
+.feedbacks > .feedbacks-box > header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.feedbacks h2 {
+    color: var(--pink-dark-text);
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.feedbacks-box header .details-divider {
+    filter: invert(48%) sepia(60%) saturate(3000%) hue-rotate(300deg) brightness(95%);
+    width: 130px;
+}
+
+.feedbacks-box header p {
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+.feedbacks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.feedbacks-list {
+    display: none;
+}
+
+
+.feedback-card {
+    background-color: var(--white-text);
+    border-radius: 24px;
+    padding: 24px 28px;
+    box-shadow: 0px 10px 30px rgba(207, 79, 116, 0.12);
+}
+ 
+.feedback-card > header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+ 
+.feedback-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+}
+ 
+.feedback-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    flex-grow: 1;
+}
+ 
+.feedback-info h3 {
+    font-family: var(--font-text);
+    font-weight: 600;
+    font-size: 16px;
+}
+ 
+.feedback-info img {
+    height: 14px;
+    width: auto;
+}
+.feedback-quote {
+    width: 40px;
+    height: auto;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+ 
+.feedback-card p {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--bg-footer);
+    border-radius: 50px 50px 0px 0px;
+    padding: 30px 50px 30px;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: var(--white-text);
+    max-width: var(--container-width);
+    margin: 0 auto;
     gap: 40px;
 }
 
-.procedimentos header{
-    text-align: center;
-    color: var(--white-text);
+.footer-logo {
+    height: 60px;
 }
 
-.img-procedimentos{
+.itens-footer {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-
+    gap: 80px;
 }
 
-.img-procedimentos img{
-    background-size: cover;
-    border-radius: 20px;
-    height: 20rem;
-    width: 20rem;
-    
+.footer-eyebrow {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    opacity: 0.9;
 }
 
-/* Estilizando os feedbacks */
-.feedbacks{
-    max-width: 1120px;
-    padding: 3rem;
-    height: 100vh;   
+.atendimento p:not(.footer-eyebrow),
+.links li,
+.links a {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 2;
 }
 
-/* Estilizando o footer */
-footer{
-    background-color: var(--bg-footer);
-    border-radius: 50px 50px 0px 0px;
-    padding: 0px 50px;
+.links a:hover {
+    opacity: 1;
+    font-weight: 600;
 }
-.footer-content{
+
+.sigame-icons {
     display: flex;
-    flex-direction: row;
-    color: var(--white-text);
-    gap: 30rem;
-    max-width: 1120px;
+    gap: 14px;
 }
 
-.itens-footer{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+.sigame-icons img {
+    width: 34px;
+    height: 34px;
 }
 
+/* =====================================================
+   MOBILE — igual ao protótipo responsivo do Figma
+   ===================================================== */
+@media (max-width: 768px) {
 
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    /* ---- Header ---- */
+    .site-header {
+        position: absolute;
+        background: transparent;
+    }
+
+    nav {
+        justify-content: flex-start;
+        background: transparent;
+        border-radius: 0;
+        height: auto;
+        padding: 24px;
+        max-width: 100%;
+    }
+
+    .logo_nail {
+        height: 90px;
+    }
+
+    .nav_itens,
+    .nav-cta {
+        display: none;
+    }
+
+      /* ---- Hero ---- */
+    .hero-main {
+        min-height: 88vh;
+    }
+ 
+    .hero-media img {
+        object-position: 63% 18%;
+    }
+ 
+    .hero-media::after {
+        background-image:
+            linear-gradient(180deg, rgba(232, 140, 169, 0.15) 0%, rgba(90, 15, 45, 0.55) 100%);
+    }
+ 
+    .hero {
+        min-height: 88vh;
+        padding: 32px 24px 60px;
+        align-items: flex-end;
+    }
+ 
+    .hero-content {
+        align-items: center;
+        text-align: center;
+        gap: 22px;
+        max-width: 100%;
+        margin: 0 auto;
+        color: var(--white-text);
+        width: 100%;
+    }
+ 
+    .hero-title span {
+        font-size: 13px;
+        color: var(--white-text);
+        opacity: 0.95;
+    }
+ 
+    .hero-content p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    /* ---- Sobre mim ---- */
+    .sobremim-bg {
+        margin-top: 0;
+        padding-top: 60px;
+        background-image: url(img/bg-sobremim-mobile.png);
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        width: 100%;
+        margin-top: -70px;
+        padding-top: 80px;
+        z-index: 1;
+    }
+
+    .sobreMim {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "text"
+            "img"
+            "button";
+        row-gap: 32px;
+        padding: 50px;
+        min-height: unset;
+        text-align: center;
+    }
+
+    .sobremim-img img {
+        height: 22rem;
+    }
+
+    .sobremim-text {
+        align-items: center;
+        max-width: 100%;
+        align-self: center;
+    }
+
+    .sobremim-cta {
+        justify-self: center;
+        align-self: center;
+        margin-top: 0;
+    }
+
+    /* ---- Procedimentos ---- */
+    .procedimentos-bg {
+        margin-top: -25px;
+        padding-top: 30px;
+    }
+
+    .procedimentos {
+        padding: 2rem 1.5rem;
+        min-height: unset;
+        gap: 32px;
+    }
+
+    .procedimentos h2 {
+        font-size: 22px;
+    }
+
+    .img-procedimentos {
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        gap: 20px;
+    }
+
+    .img-procedimentos figure {
+    width: 100%;
+    border-radius: 16px;
+}
+
+    /* ---- Feedbacks ---- */
+    .feedbacks {
+        padding: 2rem 1rem;
+    }
+
+    .feedbacks-box {
+        padding: 32px 20px;
+        border-radius: 32px;
+    }
+
+    .feedbacks-grid {
+        display: none;
+    }
+
+    .feedbacks-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+        padding: 16px 24px 18px;
+        border-radius: 32px 32px 0px 0px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .footer-logo {
+        height: 42px;
+    }
+
+    .itens-footer {
+        gap: 24px;
+        align-items: center;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .footer-eyebrow {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .atendimento p:not(.footer-eyebrow) {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .sigame-icons img {
+        width: 28px;
+        height: 28px;
+    }
+}

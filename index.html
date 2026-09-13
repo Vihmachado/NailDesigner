@@ -3,121 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thalita Pivato</title>
+    <title>Thalita Pivato | Nail Designer</title>
     <meta name="description" content="Transformando unhas em verdadeiras
 obras de arte para valorizar sua beleza.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>    
-            <nav>
-                <div class="logo_header">
-                    <a href="#">
-                        <img src="img/logo_naildesigner.svg" alt="logo" class="logo_nail">
-                    </a>
-                </div>
-                <ul class="nav_itens">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">PROCEDIMENTOS</a></li>
-                    <li><a href="#">FEEDBACK</a></li>
-                </ul>
-                <button id="button-primary">ENTRE EM CONTATO</button>
-            </nav>
-     </header>
+    <header class="site-header">
+        <nav>
+            <div class="logo_header">
+                <a href="#topo">
+                    <img src="img/logo_naildesigner.svg" alt="Logo Thalita Pivato" class="logo_nail">
+                </a>
+            </div>
+            <ul class="nav_itens">
+                <li><a href="#topo">HOME</a></li>
+                <li><a href="#procedimentos">PROCEDIMENTOS</a></li>
+                <li><a href="#feedbacks">FEEDBACK</a></li>
+            </ul>
+            <a href="https://www.instagram.com/thalitapivato?stkn=M3cwdXVxZWVmMXZj" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">ENTRE EM CONTATO</a>
+            
+        </nav>
+    </header>
 
-     <main>
-        <div class="hero-main">
+    <main>
+        <div class="hero-main" id="topo">
+            <div class="hero-media">
+                <img src="img/hero-bg.png" alt="Thalita Pivato, nail designer, em seu estúdio">
+            </div>
             <section class="hero">
-                <header class="hero-content">
+                <div class="hero-content">
                     <div>
-                        <div>
+                        <div class="hero-title">
                             <span>NAIL DESIGNER</span>
                             <h1>THALITA PIVATO</h1>
                         </div>
                         <p>Transformando unhas em verdadeiras obras de arte para valorizar sua beleza</p>
                     </div>
-                    <button id="button-primary">AGENDE SEU HORÁRIO</button>
-                </header>
+                    <a href="https://www.instagram.com/thalitapivato?stkn=M3cwdXVxZWVmMXZj" target="_blank" rel="noopener noreferrer" class="btn btn-primary">AGENDE SEU HORÁRIO</a>
+                    
+                </div>
             </section>
         </div>
 
         <div class="sobremim-bg">
             <section class="sobreMim">
-                    <div class="sobremim-img"> 
-                        <img src="img/Detalhe-IMG.svg" alt="Detalhe IMG Perfil">
-                    </div>
+                <div class="sobremim-img">
+                    <img src="img/Detalhe-IMG.svg" alt="Foto de Thalita Pivato em seu estúdio">
+                </div>
 
-                    <header class="itens-content">
-                            <div>
-                                <span>SOBRE MIM</span>
-                                <h2>Beleza que nasce do cuidado e do amor por cada detalhe.</h2>
-                            </div>
-                            <p>Olá! Sou Thalita, Nail Designer, apaixonada por transformar autoestima através do cuidado.<br> <br> Meu objetivo é proporcionar uma experiência acolhedora, onde você possa relaxar, se sentir valorizada e sair ainda mais confiante.</p>
-                            <button id="button-secondary">CONHEÇA MEU TRABALHO</button>
-                    </header>
+                <div class="sobremim-text">
+                    <span>SOBRE MIM</span>
+                    <h2>Beleza que nasce do cuidado e do amor por cada detalhe.</h2>
+                    <p>Olá! Sou Thalita, Nail Designer, apaixonada por transformar autoestima através do cuidado.<br><br>Meu objetivo é proporcionar uma experiência acolhedora, onde você possa relaxar, se sentir valorizada e sair ainda mais confiante.</p>
+                </div>
+                <a href="https://www.instagram.com/thalitapivato?stkn=M3cwdXVxZWVmMXZj" target="_blank" rel="noopener noreferrer">
+                <button class="btn btn-secondary sobremim-cta">CONHEÇA MEU TRABALHO</button>
+            </a>
+                
             </section>
         </div>
 
-        <div class="procedimentos-bg">
-        <section class="procedimentos">
+        <div class="procedimentos-bg" id="procedimentos">
+            <section class="procedimentos">
                 <header>
                     <h2>PROCEDIMENTOS</h2>
-                    <img src="img/Details.svg" alt="detalhe separacao">
+                    <img src="img/Details.svg" alt="" class="details-divider">
                 </header>
                 <div class="img-procedimentos">
-                    <img src="img/banho-gel.jpeg" alt="banho de gel">
-                    <img src="img/esmaltacao-gel.jpeg" alt="esmaltação em gel">
-                    <img src="img/alongamento-gel.jpeg" alt="Alongamento em gel">
+                    <figure>
+                        <img src="img/banho-gel.jpeg" alt="Mão com banho de gel finalizado">
+                        <figcaption>Banho de gel</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/esmaltacao-gel.jpeg" alt="Mão com esmaltação em gel branca">
+                        <figcaption>Esmaltação em gel</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/alongamento-gel.jpeg" alt="Mão com alongamento em gel decorado">
+                        <figcaption>Alongamento em gel</figcaption>
+                    </figure>
                 </div>
-            <button id="button-secondary">QUERO AGENDAR UM PROCEDIMENTO</button>
-        </section>
+                <button class="btn btn-outline">QUERO AGENDAR UM PROCEDIMENTO</button>
+            </section>
         </div>
 
-        <section class="feedbacks">
-            <header>
-                <h2>FEEDBACKS</h2>
-                <img src="img/Details.svg" alt="detalhe separacao">
-                <p>Feedbacks de clientes sobre o meu trabalho</p>
-            </header>
-            <div class="card1">
-                <div>
-                    <header>
-                        <img src="img/Icon-insta.svg" alt="Instagram">
-                        <div>
-                            <h3>Vitória Machado</h3>
-                            <img src="img/Avaliação.svg" alt="Avaliacao">
-                        </div>
-                        <img src="img/Quotes.svg" alt="Aspas">
-                    </header>
-                    <p>Ótimo atendimento! <br> A Thalita é educada, delicada e engraçada. <br> Vou voltar mais vezes</p>
+        <section class="feedbacks" id="feedbacks">
+            <div class="feedbacks-box">
+                <header>
+                    <h2>FEEDBACKS</h2>
+                    <img src="img/Details.svg" alt="" class="details-divider">
+                    <p>Feedbacks de clientes sobre o meu trabalho</p>
+                </header>
+
+                <!-- Grade de depoimentos - versão desktop -->
+                <div class="feedbacks-grid">
+                    <article class="feedback-card">
+                        <header>
+                            <img src="img/Icon-insta.svg" alt="Instagram" class="feedback-icon">
+                            <div class="feedback-info">
+                                <h3>Vitória Machado</h3>
+                                <img src="img/Avaliação.svg" alt="5 de 5 estrelas">
+                            </div>
+                            <img src="img/Quotes.svg" alt="" class="feedback-quote">
+                        </header>
+                        <p>Ótimo atendimento! <br> A Thalita é educada, delicada e engraçada. <br> Vou voltar mais vezes!!</p>
+                    </article>
+
+                    <article class="feedback-card">
+                        <header>
+                            <img src="img/Icon.svg" alt="WhatsApp" class="feedback-icon">
+                            <div class="feedback-info">
+                                <h3>Mariana</h3>
+                                <img src="img/Avaliação.svg" alt="5 de 5 estrelas">
+                            </div>
+                            <img src="img/Quotes.svg" alt="" class="feedback-quote">
+                        </header>
+                        <p>Experiência maravilhosa! <br> Caprichosa em cada detalhe. <br> O resultado ficou melhor do que eu imaginava!</p>
+                    </article>
+
+                    <article class="feedback-card">
+                        <header>
+                            <img src="img/Icon-insta.svg" alt="Instagram" class="feedback-icon">
+                            <div class="feedback-info">
+                                <h3>Rozelene Aparecida</h3>
+                                <img src="img/Avaliação.svg" alt="5 de 5 estrelas">
+                            </div>
+                            <img src="img/Quotes.svg" alt="" class="feedback-quote">
+                        </header>
+                        <p>Experiência maravilhosa! <br> Caprichosa em cada detalhe. <br> O resultado ficou melhor do que eu imaginava!</p>
+                    </article>
+
+                    <article class="feedback-card">
+                        <header>
+                            <img src="img/Icon.svg" alt="WhatsApp" class="feedback-icon">
+                            <div class="feedback-info">
+                                <h3>Juliana Alves</h3>
+                                <img src="img/Avaliação.svg" alt="5 de 5 estrelas">
+                            </div>
+                            <img src="img/Quotes.svg" alt="" class="feedback-quote">
+                        </header>
+                        <p>Amei o atendimento! <br> A Thalita é super querida, cuidadosa e muito divertida. <br> Me senti muito à vontade e amei o resultado!</p>
+                    </article>
+                </div>
+
+                <!-- Lista de depoimentos - versão mobile -->
+                <div class="feedbacks-list">
+                    <article class="feedback-card">
+                        <header>
+                            <img src="img/Icon-insta.svg" alt="Instagram" class="feedback-icon">
+                            <div class="feedback-info">
+                                <h3>Vitória Machado</h3>
+                                <img src="img/Avaliação.svg" alt="5 de 5 estrelas">
+                            </div>
+                            <img src="img/Quotes.svg" alt="" class="feedback-quote">
+                        </header>
+                        <p>Ótimo atendimento! <br> A Thalita é educada, delicada e engraçada. <br> Vou voltar mais vezes!!</p>
+                    </article>
+
+                    <article class="feedback-card">
+                        <header>
+                            <img src="img/Icon-insta.svg" alt="Instagram" class="feedback-icon">
+                            <div class="feedback-info">
+                                <h3>Carolina Santos</h3>
+                                <img src="img/Avaliação.svg" alt="5 de 5 estrelas">
+                            </div>
+                            <img src="img/Quotes.svg" alt="" class="feedback-quote">
+                        </header>
+                        <p>Experiência maravilhosa! <br> Caprichosa em cada detalhe. O resultado ficou melhor do que eu imaginava!</p>
+                    </article>
+
+                    <article class="feedback-card">
+                        <header>
+                            <img src="img/Icon-insta.svg" alt="Instagram" class="feedback-icon">
+                            <div class="feedback-info">
+                                <h3>Juliana Alves</h3>
+                                <img src="img/Avaliação.svg" alt="5 de 5 estrelas">
+                            </div>
+                            <img src="img/Quotes.svg" alt="" class="feedback-quote">
+                        </header>
+                        <p>Amei o atendimento! <br> A Thalita é super querida, cuidadosa e muito divertida. Me senti muito à vontade e amei o resultado!</p>
+                    </article>
                 </div>
             </div>
         </section>
-
-     </main>
+    </main>
 
     <footer>
         <div class="footer-content">
-            <img src="img/logo_naildesigner.svg" alt="LogoTP">
+            <img src="img/logo_naildesigner.svg" alt="Logo Thalita Pivato" class="footer-logo">
             <div class="itens-footer">
                 <div class="atendimento">
-                    <p>ATENDIMENTO</p>
+                    <p class="footer-eyebrow">ATENDIMENTO</p>
                     <p>@thalitapivato</p>
                     <p>Itajubá-MG</p>
                 </div>
                 <div class="links">
+                    <p class="footer-eyebrow">NAVEGUE</p>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre mim</a></li>
-                        <li><a href="#">Procedimentos</a></li>
-                        <li><a href="#">Feedbacks</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#topo">Home</a></li>
+                        <li><a href="#topo">Sobre mim</a></li>
+                        <li><a href="#procedimentos">Procedimentos</a></li>
+                        <li><a href="#feedbacks">Feedbacks</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
                 <div class="sigame">
-                <p>SIGA-ME</p>
-                <img src="img/InstagramLogo.svg" alt="Logo Instagram">
-                <img src="img/WhatsappLogo.svg" alt="Logo WhatsApp">
+                    <p class="footer-eyebrow">SIGA-ME</p>
+                    <div class="sigame-icons">
+                        <a href="https://www.instagram.com/thalitapivato?stkn=M3cwdXVxZWVmMXZj" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="img/InstagramLogo.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="WhatsApp"><img src="img/WhatsappLogo.svg" alt="WhatsApp"></a>
+                    </div>
                 </div>
             </div>
         </div>
