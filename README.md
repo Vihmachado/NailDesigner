@@ -7,4 +7,4 @@ O projeto foi desenvolvido para apresentar os serviços da profissional de forma
 - HTML5
 - CSS3
 
-<a href="https://vihmachado.github.io/NailDesigner/">Landing Page</a>
+<a href="https://vihmachado.github.io/NailDesigner/" target="_blank" rel="noopener noreferrer">Landing Page</a>
