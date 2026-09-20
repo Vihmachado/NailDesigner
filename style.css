@@ -655,39 +655,62 @@ footer {
     }
 
     /* ---- Procedimentos ---- */
-    .procedimentos-bg {
-        margin-top: -25px;
-        padding-top: 30px;
-    }
+.procedimentos-bg {
+    margin-top: -25px;
+    padding-top: 30px;
+}
 
-    .procedimentos {
-        padding: 2rem 1.5rem;
-        min-height: unset;
-        gap: 32px;
-    }
+.procedimentos {
+    padding: 2rem 1.5rem;
+    min-height: unset;
+    gap: 32px;
+}
 
-    .procedimentos h2 {
-        font-size: 22px;
-    }
+.procedimentos h2 {
+    font-size: 22px;
+}
 
-    .img-procedimentos {
-        flex-direction: column;
-        align-items: center;
-        width: 70%;
-        gap: 20px;
-    }
+.img-procedimentos {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+}
 
-    .img-procedimentos figure {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        border-radius: 16px;
-    }
+.img-procedimentos figure {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0;
+}
 
-    .img-procedimentos figure img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.img-procedimentos figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.img-procedimentos figure::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.img-procedimentos figure figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 40px 15px 15px;
+    color: white;
+    z-index: 2;
+}
 
     /* ---- Feedbacks ---- */
     .feedbacks {
