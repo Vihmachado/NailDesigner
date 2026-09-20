@@ -693,14 +693,6 @@ footer {
     display: block;
 }
 
-.img-procedimentos figure::after {
-    content: "";
-    position: absolute;
-    inset: 50% 0 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-    z-index: 1;
-}
-
 .img-procedimentos figure figcaption {
     position: absolute;
     bottom: 0;
@@ -709,7 +701,7 @@ footer {
     margin: 0;
     padding: 40px 15px 15px;
     color: white;
-    z-index: 2;
+    z-index: 1;
 }
 
     /* ---- Feedbacks ---- */
